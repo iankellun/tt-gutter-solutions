@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>T&T Gutter Solutions</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #eee;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header a {
+      text-decoration: none;
+      background: #0a66c2;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      padding-top: 140px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 14px;
+      color: #555;
+    }
+
+    .hero .trustline {
+      font-size: 15px;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 900px;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+    .services {
+      background: #f7f9fb;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .service h4 {
+      margin-bottom: 8px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .contact {
+      background: #f7f9fb;
+    }
+
+    form {
+      max-width: 520px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background: #0a66c2;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .cta {
+      text-align: center;
+      background: #0a66c2;
+      color: #fff;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #fff;
+      color: #0a66c2;
+      padding: 14px 24px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #111;
+      color: #aaa;
+    }
+
+    footer span {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    @media (max-width: 520px) {
+      header {
+        padding: 12px 16px;
+      }
+      header img {
+        height: 34px;
+      }
+      header a {
+        padding: 9px 12px;
+        font-size: 14px;
+      }
+      .hero h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="T&T Gutter Solutions Logo">
+  <a href="tel:18283028609">Call 828-302-8609</a>
+</header>
+
+<section class="hero">
+  <h2>T&T Gutter Solutions</h2>
+  <p>
+    We specialize in residential and commercial gutter installation and repair, with
+    additional services including gutter guards, fascia board, and soffit.
+  </p>
+  <p class="trustline">
+    Residential & Commercial • 5" & 6" Gutter Systems • Free Estimates • Locally Owned
+  </p>
+
+  <a href="tel:18283028609" style="display:inline-block; margin-top:10px; font-weight:bold; text-decoration:none;">
+    📞 Call for a Free Estimate
+  </a>
+
+  <img src="hero.jpg" alt="Gutter work">
+</section>
+
+<section class="services">
+  <h3>Our Services</h3>
+  <div class="service-list">
+
+    <div class="service">
+      <h4>Gutter Installation & Repair</h4>
+      <p>
+        Our specialty. We install and repair 5-inch residential and 6-inch gutter systems
+        designed to protect homes and commercial properties from water damage.
+      </p>
+    </div>
+
+    <div class="service">
+      <h4>Gutter Guards</h4>
+      <p>
+        Reduce clogs and maintenance with professionally installed gutter guards.
+      </p>
+    </div>
+
+    <div class="service">
+      <h4>Fascia Board</h4>
+      <p>
+        Repair or replacement to support your gutter system and protect roof edges.
+      </p>
+    </div>
+
+    <div class="service">
+      <h4>Soffit</h4>
+      <p>
+        Improve ventilation and appearance with quality soffit installation and repair.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery">
+  <h3>Our Work</h3>
+  <div class="gallery-grid">
+    <img src="work1.jpg" alt="Gutter job">
+    <img src="work2.jpg" alt="Gutter installation">
+    <img src="work3.jpg" alt="Finished gutters">
+  </div>
+</section>
+
+<section class="contact">
+  <h3>Request a Free Estimate</h3>
+
+  <form action="https://formsubmit.co/tndtguttersolutions@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Estimate Request – T&T Gutter Solutions">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+
+    <button type="submit">Send Request</button>
+  </form>
+
+  <p style="text-align:center; font-size:14px; color:#666; margin-top:14px;">
+    We’ll get back to you as soon as possible.
+  </p>
+</section>
+
+<section class="cta">
+  <h3>Call Now — We’re Ready to Help</h3>
+  <p>Fast, reliable residential & commercial service from a local gutter company.</p>
+  <a href="tel:18283028609">Call 828-302-8609</a>
+</section>
+
+<footer>
+  <p>© 2026 <span>T&T Gutter Solutions</span></p>
+</footer>
+
+</body>
+</html>
