@@ -3,305 +3,833 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>T&T Gutter Solutions</title>
-  
+  <title>T&T Gutter Solutions | Gutter Installation, Repairs & Half-Round Gutters in NC</title>
+  <meta name="description" content="T&T Gutter Solutions provides gutter installation, repairs, cleaning, leaf guards, fascia and soffit in North Carolina. Serving Hickory, Charlotte, Asheville, Boone, Lincolnton & surrounding areas. Free estimates."/>
+  <meta name="theme-color" content="#0a66c2"/>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+    :root{
+      /* Keep it subtle. If you want closer-to-logo colors later, change these 3. */
+      --primary: #0a66c2;     /* blue */
+      --accent:  #1e8e3e;     /* green */
+      --dark:    #0b1220;
+      --text:    #1b1f2a;
+      --muted:   #5b6475;
+      --bg:      #ffffff;
+      --soft:    #f4f7fb;
+      --card:    #ffffff;
+      --border:  #e8edf5;
+      --shadow:  0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius:  14px;
     }
 
-    body {
-      color: #222;
-      line-height: 1.6;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family: Arial, Helvetica, sans-serif;}
+    body{color:var(--text);line-height:1.6;background:var(--bg);}
+    a{color:inherit}
+    img{max-width:100%;display:block}
 
-    header {
+    /* Header */
+    header{
       position: fixed;
       top: 0;
       width: 100%;
-      background: #ffffff;
-      border-bottom: 1px solid #eee;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
     }
-
-    header img {
-      height: 40px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
     }
-
-    header a {
-      text-decoration: none;
-      background: #0a66c2;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 4px;
-      font-weight: bold;
+    header img{height:42px}
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
+    .nav a{
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid transparent;
+      color:var(--dark);
+    }
+    .nav a:hover{border-color:var(--border); background: #fff;}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      font-weight:800;
+      border-radius:12px;
+      padding:12px 16px;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition: transform .08s ease, box-shadow .12s ease;
+      white-space:nowrap;
+    }
+    .btn:active{transform: translateY(1px);}
+    .btn-primary{background:var(--primary);color:#fff;box-shadow: 0 10px 20px rgba(10,102,194,0.25);}
+    .btn-outline{background:#fff;color:var(--dark);border-color:var(--border);}
+    .btn-accent{background:var(--accent);color:#fff;box-shadow: 0 10px 20px rgba(30,142,62,0.2);}
 
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
+    /* Sections */
+    section{
+      padding: 80px 18px;
+      max-width: 1120px;
       margin: auto;
     }
 
-    .hero {
-      padding-top: 140px;
-      text-align: center;
+    /* Hero */
+    .hero{
+      padding-top: 110px; /* header offset */
     }
-
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 14px;
-      color: #555;
-    }
-
-    .hero .trustline {
-      font-size: 15px;
-      color: #777;
-      margin-bottom: 25px;
-    }
-
-    .hero img {
-      width: 100%;
-      max-width: 900px;
-      margin-top: 30px;
-      border-radius: 8px;
-    }
-
-    .services {
-      background: #f7f9fb;
-    }
-
-    h3 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .service {
-      background: #fff;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .service h4 {
-      margin-bottom: 8px;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    .contact {
-      background: #f7f9fb;
-    }
-
-    form {
-      max-width: 520px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
-    button {
-      background: #0a66c2;
-      color: #fff;
-      border: none;
-      padding: 14px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .cta {
-      text-align: center;
-      background: #0a66c2;
-      color: #fff;
-    }
-
-    .cta a {
-      display: inline-block;
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items:center;
       margin-top: 20px;
-      background: #fff;
-      color: #0a66c2;
-      padding: 14px 24px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 4px;
+    }
+    .hero-card{
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      font-weight:800;
+      color: var(--dark);
+      background: #eef6ff;
+      border:1px solid #dbeafe;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    .kicker i{color: var(--primary);}
+    .hero h1{
+      font-size: 40px;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+    .hero p{
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .hero-actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      margin: 14px 0 18px;
+    }
+    .trustbar{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .trust{
+      border: 1px solid var(--border);
+      background:#fff;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .trust i{color: var(--accent); margin-top: 2px;}
+    .hero-media{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background:#fff;
+    }
+    .hero-media img{
+      width:100%;
+      height: 420px;
+      object-fit: cover;
+    }
+    .hero-logo{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .hero-logo img{height: 70px}
+    .hero-logo .tagline{
+      font-weight:900;
+      color: var(--dark);
+      line-height:1.2;
+    }
+    .hero-logo .tagline small{
+      display:block;
+      font-weight:700;
+      color: var(--muted);
+      margin-top: 4px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #111;
-      color: #aaa;
+    /* Cards / grids */
+    .section-title{
+      text-align:center;
+      margin-bottom: 12px;
+      font-size: 30px;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+    }
+    .section-sub{
+      text-align:center;
+      max-width: 760px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .soft{background: var(--soft);}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 24px rgba(15,23,42,0.05);
+      padding: 18px;
     }
 
-    footer span {
-      color: #fff;
-      font-weight: bold;
+    /* Services */
+    .service-card{
+      grid-column: span 4;
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+    }
+    .icon{
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #eef6ff;
+      border: 1px solid #dbeafe;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 auto;
+    }
+    .icon i{color: var(--primary); font-size: 18px;}
+    .service-card h3{
+      font-size: 17px;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+    .service-card p{
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .highlight{
+      border: 2px solid rgba(30,142,62,0.22);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(30,142,62,0.05) 100%);
+    }
+    .badge{
+      display:inline-block;
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--accent);
+      background: rgba(30,142,62,0.08);
+      border: 1px solid rgba(30,142,62,0.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-top: 10px;
     }
 
-    @media (max-width: 520px) {
-      header {
-        padding: 12px 16px;
-      }
-      header img {
-        height: 34px;
-      }
-      header a {
-        padding: 9px 12px;
-        font-size: 14px;
-      }
-      .hero h2 {
-        font-size: 30px;
-      }
+    /* Why gutters matter */
+    .why-wrap{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+    .why-points{
+      display:grid;
+      gap: 12px;
+    }
+    .point{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 14px;
+      border-radius: 14px;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+    .point i{color: var(--accent); margin-top: 2px;}
+    .point b{color: var(--dark);}
+
+    /* Gallery */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .gallery-item{
+      grid-column: span 4;
+      border-radius: 14px;
+      overflow:hidden;
+      border: 1px solid var(--border);
+      background:#fff;
+      box-shadow: 0 10px 20px rgba(15,23,42,0.06);
+    }
+    .gallery-item img{
+      width:100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .gallery-cap{
+      padding: 12px 12px 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Reviews */
+    .reviews{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .review{
+      grid-column: span 4;
+    }
+    .stars{color:#f59e0b; margin-bottom: 8px;}
+    .review p{color: var(--muted); font-size: 14px;}
+    .review .name{margin-top: 10px; font-weight: 900; color: var(--dark); font-size: 14px;}
+
+    /* Service areas */
+    .areas{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      align-items:start;
+      margin-top: 18px;
+    }
+    .area-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .pill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background:#fff;
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--dark);
+    }
+
+    /* Contact */
+    form{
+      max-width: 640px;
+      margin: 0 auto;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+    input, textarea{
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid #cfd8e6;
+      font-size: 16px;
+      outline: none;
+    }
+    input:focus, textarea:focus{
+      border-color: rgba(10,102,194,0.5);
+      box-shadow: 0 0 0 4px rgba(10,102,194,0.12);
+    }
+    .contact-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .contact-social{
+      margin-top: 18px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap: 12px;
+      color: var(--muted);
+      font-weight: 800;
+    }
+    .contact-social a{
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      border:1px solid var(--border);
+      text-decoration:none;
+      box-shadow: 0 10px 18px rgba(15,23,42,0.05);
+    }
+    .contact-social i{font-size: 18px; color: var(--primary);}
+
+    /* Footer */
+    footer{
+      text-align:center;
+      padding: 28px 18px;
+      background: #0b1220;
+      color: rgba(255,255,255,0.75);
+    }
+    footer span{color:#fff;font-weight:900;}
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap: 12px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .footer-links a{
+      color: rgba(255,255,255,0.85);
+      text-decoration:none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 2px;
+    }
+
+    /* Sticky mobile bar */
+    .mobilebar{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1001;
+      background: rgba(255,255,255,0.95);
+      border-top: 1px solid var(--border);
+      padding: 10px 12px;
+      display:none;
+      gap: 10px;
+    }
+    .mobilebar a{
+      flex: 1;
+      text-align:center;
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-decoration:none;
+      font-weight: 900;
+      border: 1px solid transparent;
+    }
+    .mobilebar .call{background: var(--primary); color:#fff;}
+    .mobilebar .text{background: #fff; border-color: var(--border); color: var(--dark);}
+    .mobilebar .estimate{background: var(--accent); color:#fff;}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns: 1fr;}
+      .hero-media img{height: 360px;}
+      .trustbar{grid-template-columns: repeat(2, minmax(0,1fr));}
+      .service-card{grid-column: span 6;}
+      .review{grid-column: span 6;}
+      .areas{grid-template-columns: 1fr;}
+    }
+    @media (max-width: 620px){
+      header img{height: 38px;}
+      .nav{display:none;}
+      .hero h1{font-size: 34px;}
+      section{padding: 70px 16px;}
+      .gallery-item{grid-column: span 12;}
+      .service-card{grid-column: span 12;}
+      .review{grid-column: span 12;}
+      .why-wrap{grid-template-columns: 1fr;}
+      .contact-row{grid-template-columns: 1fr;}
+      .mobilebar{display:flex;}
+      body{padding-bottom: 74px;} /* space for mobile bar */
     }
   </style>
+
+  <!-- LocalBusiness schema (helps SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "T&T Gutter Solutions",
+    "url": "https://ttgutters.com",
+    "telephone": "+1-828-302-8609",
+    "email": "tndtguttersolutions@gmail.com",
+    "areaServed": ["Hickory NC","Charlotte NC","Asheville NC","Boone NC","Lincolnton NC","Mooresville NC","Statesville NC","Lenoir NC","Morganton NC","Taylorsville NC","Newton NC","Conover NC","Denver NC"],
+    "description": "Gutter installation, repairs, cleaning, leaf guards, fascia and soffit. Specializing in half-round gutters. Serving NC with free estimates."
+  }
+  </script>
 </head>
+
 <body>
 
 <header>
-  <img src="logo.png" alt="T&T Gutter Solutions Logo">
-  <a href="tel:18283028609">Call 828-302-8609</a>
-</header>
-
-<section class="hero">
-  <h2>T&T Gutter Solutions</h2>
-  <p>
-    We specialize in residential and commercial gutter installation and repair, with
-    additional services including gutter guards, fascia board, and soffit.
-  </p>
-  <p class="trustline">
-    Residential & Commercial • 5" & 6" Gutter Systems • Free Estimates • Locally Owned
-  </p>
-
-  <a href="tel:18283028609" style="display:inline-block; margin-top:10px; font-weight:bold; text-decoration:none;">
-    📞 Call for a Free Estimate
+  <a class="brand" href="#top" aria-label="T&T Gutter Solutions Home">
+    <img src="logo.png" alt="T&T Gutter Solutions Logo">
   </a>
 
-  <img src="hero.jpg" alt="Gutter work">
-</section>
+  <nav class="nav" aria-label="Primary">
+    <a href="#services">Services</a>
+    <a href="#specialty">Half-Round</a>
+    <a href="#work">Work</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Service Areas</a>
+    <a href="#estimate" class="btn btn-outline">Free Estimate</a>
+  </nav>
 
-<section class="services">
-  <h3>Our Services</h3>
-  <div class="service-list">
+  <a class="btn btn-primary" href="tel:18283028609"><i class="fa-solid fa-phone"></i> Call 828-302-8609</a>
+</header>
 
-    <div class="service">
-      <h4>Gutter Installation & Repair</h4>
+<section class="hero" id="top">
+  <div class="hero-grid">
+
+    <div class="hero-card">
+      <div class="hero-logo">
+        <img src="logo.png" alt="T&T Gutter Solutions Logo Large">
+        <div class="tagline">
+          T&T Gutter Solutions
+          <small>Locally owned • Free estimates • Quality work</small>
+        </div>
+      </div>
+
+      <div class="kicker">
+        <i class="fa-solid fa-star"></i>
+        5-Star Rated • Residential & Commercial
+      </div>
+
+      <h1>Gutter Installation & Repair That Protects Your Home</h1>
       <p>
-        Our specialty. We install and repair 5-inch residential and 6-inch gutter systems
-        designed to protect homes and commercial properties from water damage.
+        We install and repair gutter systems built to handle North Carolina weather — clean lines, strong flow, and dependable protection.
+        Serving <b>Hickory, Charlotte, Asheville, Boone, Lincolnton</b> and surrounding areas.
       </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#estimate"><i class="fa-solid fa-clipboard-check"></i> Request Free Estimate</a>
+        <a class="btn btn-outline" href="tel:18283028609"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <a class="btn btn-accent" href="sms:18283028609"><i class="fa-solid fa-comment-dots"></i> Text Us</a>
+      </div>
+
+      <div class="trustbar">
+        <div class="trust"><i class="fa-solid fa-check"></i><div><b>Free Estimates</b><br/>Fast response & clear quotes</div></div>
+        <div class="trust"><i class="fa-solid fa-check"></i><div><b>Clean Install</b><br/>Professional finish every time</div></div>
+        <div class="trust"><i class="fa-solid fa-check"></i><div><b>Leaf Guard Options</b><br/>Less clogs & less maintenance</div></div>
+        <div class="trust"><i class="fa-solid fa-check"></i><div><b>Locally Owned</b><br/>Real people, real work</div></div>
+      </div>
     </div>
 
-    <div class="service">
-      <h4>Gutter Guards</h4>
-      <p>
-        Reduce clogs and maintenance with professionally installed gutter guards.
-      </p>
-    </div>
-
-    <div class="service">
-      <h4>Fascia Board</h4>
-      <p>
-        Repair or replacement to support your gutter system and protect roof edges.
-      </p>
-    </div>
-
-    <div class="service">
-      <h4>Soffit</h4>
-      <p>
-        Improve ventilation and appearance with quality soffit installation and repair.
-      </p>
+    <div class="hero-media">
+      <img src="hero.jpg" alt="Gutter work on a home">
     </div>
 
   </div>
 </section>
 
-<section class="gallery">
-  <h3>Our Work</h3>
-  <div class="gallery-grid">
-  <img src="images/gutter-job-1.jpg" alt="Gutter job">
-  <img src="images/gutter-installation-1.jpg" alt="Gutter installation">
-  <img src="images/finished-gutters-1.jpg" alt="Finished gutters">
-</div>
+<section class="soft" id="services">
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-sub">
+    We handle installs, repairs, maintenance, and upgrades — built around protecting your home from water damage.
+  </p>
+
+  <div class="grid">
+    <div class="card service-card">
+      <div class="icon"><i class="fa-solid fa-house-chimney"></i></div>
+      <div>
+        <h3>Gutter Installation</h3>
+        <p>Seamless installs with clean lines and proper pitch so water moves where it should.</p>
+      </div>
+    </div>
+
+    <div class="card service-card">
+      <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <div>
+        <h3>Gutter Repairs</h3>
+        <p>Fix leaks, sagging, separation, and problem areas before they become expensive damage.</p>
+      </div>
+    </div>
+
+    <div class="card service-card">
+      <div class="icon"><i class="fa-solid fa-broom"></i></div>
+      <div>
+        <h3>Gutter Cleaning</h3>
+        <p>Keep gutters flowing properly and prevent overflow, rot, and foundation issues.</p>
+      </div>
+    </div>
+
+    <div class="card service-card">
+      <div class="icon"><i class="fa-solid fa-shield"></i></div>
+      <div>
+        <h3>Leaf Guard Systems</h3>
+        <p>Reduce clogs and maintenance with professionally installed gutter guards.</p>
+      </div>
+    </div>
+
+    <div class="card service-card">
+      <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+      <div>
+        <h3>Fascia Board</h3>
+        <p>Repair or replacement to support your gutter system and protect roof edges.</p>
+      </div>
+    </div>
+
+    <div class="card service-card">
+      <div class="icon"><i class="fa-solid fa-wind"></i></div>
+      <div>
+        <h3>Soffit</h3>
+        <p>Improve ventilation and appearance with quality soffit installation and repair.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="contact">
-  <h3>Request a Free Estimate</h3>
+<section id="specialty">
+  <h2 class="section-title">Half-Round Gutters (Specialty)</h2>
+  <p class="section-sub">
+    Half-round gutters give a premium look with excellent flow — a great fit for high-end homes and unique styles.
+    (We’ll add real project photos here as soon as you have them.)
+  </p>
+
+  <div class="grid">
+    <div class="card service-card highlight" style="grid-column: span 12;">
+      <div class="icon" style="background: rgba(30,142,62,0.10); border-color: rgba(30,142,62,0.20);">
+        <i class="fa-solid fa-circle-half-stroke" style="color: var(--accent);"></i>
+      </div>
+      <div>
+        <h3>Premium Half-Round Installs</h3>
+        <p>
+          Looking for a cleaner, classic style? Half-round gutters are known for their smooth design, strong water flow,
+          and upgraded curb appeal.
+        </p>
+        <div class="badge">Ask about Half-Round Options</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="why">
+  <h2 class="section-title">Why Proper Gutters Matter</h2>
+  <p class="section-sub">
+    Gutters aren’t just for looks — they protect your home from water damage that can cost thousands.
+  </p>
+
+  <div class="why-wrap">
+    <div class="card">
+      <h3 style="font-size:18px;margin-bottom:10px;color:var(--dark);">What we prevent</h3>
+      <div class="why-points">
+        <div class="point"><i class="fa-solid fa-check"></i><div><b>Foundation damage</b><br/>Stops water pooling and soil washout.</div></div>
+        <div class="point"><i class="fa-solid fa-check"></i><div><b>Roof & fascia rot</b><br/>Prevents overflow and hidden moisture.</div></div>
+        <div class="point"><i class="fa-solid fa-check"></i><div><b>Siding stains & mold</b><br/>Directs runoff away from your exterior.</div></div>
+        <div class="point"><i class="fa-solid fa-check"></i><div><b>Landscape erosion</b><br/>Keeps water from cutting trenches around the home.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="font-size:18px;margin-bottom:10px;color:var(--dark);">What you get with us</h3>
+      <div class="why-points">
+        <div class="point"><i class="fa-solid fa-star"></i><div><b>Clean, professional finish</b><br/>Work that looks good and lasts.</div></div>
+        <div class="point"><i class="fa-solid fa-comments"></i><div><b>Clear communication</b><br/>No guessing — you’ll know the plan.</div></div>
+        <div class="point"><i class="fa-solid fa-shield-halved"></i><div><b>Protection-focused installs</b><br/>We care about flow, pitch, and drainage.</div></div>
+        <div class="point"><i class="fa-solid fa-house"></i><div><b>Local company</b><br/>We show up and stand behind our work.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2 class="section-title">Our Work</h2>
+  <p class="section-sub">
+    A few recent installs and repairs. (Add more photos over time — it helps trust and Google.)
+  </p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="images/gutter-job-1.jpg" alt="Gutter job on home">
+      <div class="gallery-cap">Clean install and secure fastening.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gutter-installation-1.jpg" alt="Gutter installation">
+      <div class="gallery-cap">Proper pitch for strong water flow.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/finished-gutters-1.jpg" alt="Finished gutters">
+      <div class="gallery-cap">Finished look that protects your home.</div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="reviews">
+  <h2 class="section-title">Google Reviews</h2>
+  <p class="section-sub">
+    Homeowners choose us because we show up, do it right, and stand behind our work.
+  </p>
+
+  <div class="reviews">
+
+    <div class="review card">
+      <div class="stars">★★★★★</div>
+      <p>Great local independent company — honest and great work.</p>
+      <div class="name">Frank H</div>
+    </div>
+
+    <div class="review card">
+      <div class="stars">★★★★★</div>
+      <p>Very professional and great work ethic. Highly recommend.</p>
+      <div class="name">Melissa Adams</div>
+    </div>
+
+    <div class="review card">
+      <div class="stars">★★★★★</div>
+      <p>New gutters installed and still perfect after storms. Solid work.</p>
+      <div class="name">R Kin</div>
+    </div>
+
+    <div class="review card">
+      <div class="stars">★★★★★</div>
+      <p>Quick, efficient, and did an amazing job. Couldn’t ask for better.</p>
+      <div class="name">Nyce Marley</div>
+    </div>
+
+    <div class="review card">
+      <div class="stars">★★★★★</div>
+      <p>Professional, quick, and great quality work. Definitely recommend.</p>
+      <div class="name">Keisha Vaughn</div>
+    </div>
+
+    <div class="review card">
+      <div class="stars">★★★★★</div>
+      <p>Very professional and kept me updated throughout the whole process.</p>
+      <div class="name">Riley Fortner</div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:20px;">
+    <a class="btn btn-primary" href="https://maps.app.goo.gl/2AToULx7Hgph6Tsv6" target="_blank">
+      <i class="fa-brands fa-google"></i> Read More Reviews
+    </a>
+  </div>
+</section>
+
+<section id="areas">
+  <h2 class="section-title">Service Areas</h2>
+  <p class="section-sub">
+    We proudly serve homeowners and businesses across North Carolina.
+  </p>
+
+  <div class="areas">
+    <div class="card">
+      <h3 style="font-size:18px;color:var(--dark);margin-bottom:8px;">Main Areas We Serve</h3>
+      <p style="color:var(--muted);font-size:14px;">
+        If you’re nearby but don’t see your town listed, reach out — we may still be able to help.
+      </p>
+      <div class="area-list">
+        <div class="pill">Charlotte</div>
+        <div class="pill">Asheville</div>
+        <div class="pill">Boone</div>
+        <div class="pill">Lincolnton</div>
+        <div class="pill">Hickory</div>
+        <div class="pill">Mooresville</div>
+        <div class="pill">Statesville</div>
+        <div class="pill">Lenoir</div>
+        <div class="pill">Morganton</div>
+        <div class="pill">Taylorsville</div>
+        <div class="pill">Newton</div>
+        <div class="pill">Conover</div>
+        <div class="pill">Denver</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="font-size:18px;color:var(--dark);margin-bottom:8px;">Fastest Way to Reach Us</h3>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:14px;">
+        Call or text and we’ll get you a quick estimate.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <a class="btn btn-primary" href="tel:18283028609"><i class="fa-solid fa-phone"></i> Call 828-302-8609</a>
+        <a class="btn btn-outline" href="sms:18283028609"><i class="fa-solid fa-comment-dots"></i> Text Us</a>
+        <a class="btn btn-accent" href="#estimate"><i class="fa-solid fa-clipboard-check"></i> Request Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="estimate">
+  <h2 class="section-title">Request a Free Estimate</h2>
+  <p class="section-sub">
+    Tell us what you need — we’ll follow up as soon as possible.
+  </p>
 
   <form action="https://formsubmit.co/tndtguttersolutions@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="New Estimate Request – T&T Gutter Solutions">
     <input type="hidden" name="_captcha" value="false">
 
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+    <div class="contact-row">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
 
-    <button type="submit">Send Request</button>
+    <input type="text" name="city" placeholder="City (ex: Charlotte, Hickory, Boone)" required>
+    <textarea name="message" rows="5" placeholder="What do you need? (Install, repair, cleaning, leaf guard, half-round, etc.)" required></textarea>
+
+    <button class="btn btn-primary" type="submit" style="border-radius:12px;"><i class="fa-solid fa-paper-plane"></i> Send Request</button>
   </form>
 
-<div class="contact-social">
-  <p>Follow us on Facebook</p>
-  <a href="https://www.facebook.com/share/1D5qLK4Get/?mibextid=wwXIfr"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Facebook">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
-</div>
+  <div class="contact-social">
+    <span>Follow us on Facebook</span>
+    <a href="https://www.facebook.com/share/1D5qLK4Get/?mibextid=wwXIfr"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+  </div>
 
-  <p style="text-align:center; font-size:14px; color:#666; margin-top:14px;">
+  <p style="text-align:center; font-size:14px; color:var(--muted); margin-top:14px;">
     We’ll get back to you as soon as possible.
   </p>
 </section>
 
-<section class="cta">
-  <h3>Call Now — We’re Ready to Help</h3>
-  <p>Fast, reliable residential & commercial service from a local gutter company.</p>
-  <a href="tel:18283028609">Call 828-302-8609</a>
-</section>
-
 <footer>
   <p>© 2026 <span>T&T Gutter Solutions</span></p>
+  <div class="footer-links">
+    <a href="tel:18283028609">Call: 828-302-8609</a>
+    <a href="#services">Services</a>
+    <a href="#areas">Service Areas</a>
+    <a href="#estimate">Free Estimate</a>
+  </div>
 </footer>
+
+<!-- Sticky mobile action bar -->
+<div class="mobilebar" aria-label="Quick Actions">
+  <a class="call" href="tel:18283028609"><i class="fa-solid fa-phone"></i> Call</a>
+  <a class="text" href="sms:18283028609"><i class="fa-solid fa-comment-dots"></i> Text</a>
+  <a class="estimate" href="#estimate"><i class="fa-solid fa-clipboard-check"></i> Estimate</a>
+</div>
 
 </body>
 </html>
